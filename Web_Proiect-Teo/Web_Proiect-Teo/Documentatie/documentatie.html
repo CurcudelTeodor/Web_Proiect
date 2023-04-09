@@ -1,0 +1,192 @@
+<!doctype html>  
+<html lang="ro">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+    
+    <title>Documentatie</title>
+
+    <link rel="stylesheet" href="documentatie.css">
+
+
+  </head>
+  <body>
+
+    <section class="contents">
+
+        
+        <h1>Zoo Web Manager</h1>
+        
+        <div class="continut">
+        <h2>Cerintă</h2>
+        <p>&nbsp &nbsp Sa se implementeze o aplicatie Web menita a gestiona informatiile vizand o gradina zoologica. Se vor facilita redarea si managementul datelor despre animalele gazduite: denumire populara/stiintifica, descriere (de dorit, multilingva), origine, statut (e.g., specie protejata, pe cale de disparitie, daunatoare etc.), caracteristici (de exemplu, dependenta de clima, periculozitate, proprietati speciale), specii inrudite, dusmani naturali, imagini de interes, regim alimentar (vegetarian, carnivor, omnivor), mod de inmultire si altele. Se vor pune la dispozitie mecanisme de cautare/filtrare/prezentare multi-criteriala -- de pilda, afisarea tuturor mamiferelor cu blana de origine europeana ce pot fi dresate sau generarea unei liste de pasari/taratoare capabile sa supravietuiasca in conditii desertice. Datele vor putea fi importate/exportate via fisiere disponibile in formatele JSON si XML. Functionalitatile esentiale se vor oferi si de catre un API REST/GraphQL.</p>
+        </div>
+        
+        <div class="continut"> 
+          <h2>Introducere</h2>
+          <p>&nbsp &nbsp Wild Gove(ZoM) reprezinta o experienta placuta in cautarea informatiilor despre o multitudine de animale. 
+            Avand un meniu de navigare foarte usor de utilizat pana si de cei mai neexeperimentati utilizatori ai 
+            unui site web, Wild Grove ofera o interactiune plina de culoare, cu un design atragator construit prin 
+            intermediul unei multitudini de imagini cu o paleta de culori bine aleasa. Aceasta aplicatie de web are un 
+            scop educativ pentru utilizatorii sai care au sansa sa invete caracteristici si curiozitati despre animalele 
+            lor favorite. </p>
+         </div>  
+         
+
+       
+
+        <div class="continut">
+          <h2>Structură</h2>
+          <h3> &nbsp &nbsp Site-ul este organizat în jurul a 9 pagini importante: Login, Register, Forgot Password (Enter Your Email + Code Verification + Reset Password), Home, Animals, Animal Example, About, Help, Settings</h3>
+          <br>
+          <p>Teo s-a ocupat de paginile de Login, Code Verification si Reset Password</p>
+          <p>Iustin s-a ocupat de Home, Help, About, Settings</p>
+          <p>Alex s-a ocupat de Register, Animals, Animal Example (VulpePolara), Email</p>
+
+            <h3>Login</h3><br>
+            <p> &nbsp &nbsp Papagalul este pe prima pagina cu care ia contact utilizatorul. Este o pasare care iti ia ochii datorita
+                culorilor sale vii. In partea de sus avem numele gradinei zoologice, iar in partea din stanga este efectiv
+                partea de login care are cateva animatii. Utilizatorul se poate conecta cu un nume si o parola, iar daca 
+                acestea sunt corecte, dupa apasarea butonului de login, va fi redirectionat la pagina de home 
+                (ambele campuri trebuie completate). 
+                Daca si-a uitat parola, poate apasa pe buton de "Forgot password" care il va redirectiona la o pagina de
+                recuperare a parolei. In caz ca utilizatorul nu are un cont, acesta poate sa isi creeze unul apasand pe 
+                Register. In partea dreapta se afla motto-ul gradinei noastre zoo. <br>
+      
+                &nbsp &nbsp Partea de login efectiv se afla in partea stanga pentru a se forma un colaj armonios cu imaginea de 
+                fundal. De asemenea, culorile sunt alese pentru a reprezenta penajul colorat al papagalului. Fontul
+                a fost ales pentru a capta atentia utilizatorului si de a-l introduce in tematica zoo.	<br>
+                
+      
+                &nbsp &nbsp Partea de responsive: cand latimea ecranului e mai mica de 1300 pixeli, motto-ul dispare, iar chenarul de 
+                login se repozitioneaza astfel incat papagalul sa fie in totalitate vizibil. Imaginea se muta si ea. Am ales
+                ca fundalul chenarului sa nu dispara, deoarece altfel, textul nu ar fi in totalitate vizibil.
+                La dimesiuni sub 500 pixeli, titlul devine mai mic si se centreaza pentru a putea fi citit mai usor.</p> 
+            <br>
+            
+            <h3>Register</h3><br>
+            <p>&nbsp &nbsp Asa cum ii spune si numele, este pagina prin care se realizeaza crearea unui noi cont de utilizator, la designul acestei pagini am folosit o poza simpatica de background, ale carei culori sunt foarte asemanatoare cu culorile utilizate in formularul de inregistrare. Formularul de inregistrare este unul foarte usor de completat, utilizatorului i se cere sa completeze un nume de utilizator, o parola, un email si de asemenea sa bifeze acordul de confidentialitate.          </p>     
+            <br>
+            
+            <h3>Enter Your Email </h3><br>
+            <p> &nbsp &nbsp Aceasta pagina reprezinta primul pas in recuperarea unei parole pierdute, in momentul incercarii de login, utilizator are acces la optiunea "Forgot Password" de unde este directionat direct catre aceasta pagina unde este pus sa isi completeze email-ul asociat contului </p> 
+            <br>
+            
+            <h3>Code Verification</h3><br>
+            <p> &nbsp &nbsp Estetica acestei pagini este una asemanatoare cu cea a paginii de Login, in sensul ca actiunea imaginii se
+                petrece in partea stanga, iar formularul de introducere a codului primit pe email este in dreapta. Am ales
+                o imagine cu camile deoarece noi ne asemanam cu ele: asa cum ele sunt acolo pentru calatorii prin desert, asa
+                suntem si noi alaturi de utilizatorul care nu si-a primit codul. Acesta poate apasa butonul de Resend pentru 
+                a-i fi trimis un nou cod pe email. Butonul este galben pentru a putea fi vazut cu usurinta. Fundalul formularului
+                este de culoarea cerului, iar butonul Verify (de verificare a codului), de culoarea dunelor de nisip. Daca codul
+                primit pe email corespunde cu cel introdus de utilizator in campul "Enter verification code", atunci acesta
+                este redirectionat la pagina de resetare a parolei efectiv.
+        
+                Partea de reponsive: la dimensiuni mai mici de 1200 pixeli, fundalul formularului dispare pentru ca ecranul sa nu fie
+                prea incarcat si pentru a vedea imaginea in toata splendoarea ei. La pragul de 500 de pixel in latime, titlul
+                se redimensioneaza si se repozitioneaza pe centru pentru o mai buna simetrie pe ecranele mai mici. </p> 
+            <br>
+            
+            <h3>Reset Password</h3><br>
+            <p> &nbsp &nbsp Am ales o imagine sugestiva cu un urangutan care arata destul de nedumerit probabil ca din cauza ca si el
+                si-a uitat parola. Acum fiind siguri ca respectivul cont apartine celui care detine email-ul asociat (pentru
+                ca acele coduri de verificare corespundeau), utilizatorul isi poate reseta vechea parola. La fel ca la pagina
+                de Login, toate cele 3 campuri trebuie completate pentru a reseta parola. <br>
+               
+                &nbsp &nbsp Am ales culorile pentru a fi in concordanta cu imaginea de fundal si pentru a oferi un aspect vizual placut
+                utilizatorului. <br>
+       
+                &nbsp &nbsp Partea de responsive: cand ecranul are mai putin de 1300 pixeli pe latime fundalul chenarului de reset password dispare
+                pentru ca ecranul sa nu devina prea incarcat. De asemenea, imaginea se muta si ea pentru ca utilizatorii sa
+                poata vedea esentialul. La dimensiuni mai mici de 500 pixeli in latime, titlul devine mai mic si se centreaza.
+                Am ales culoarea alb pentru ca este foarte vizibila in contextul imaginii de fundal.<br>
+               
+                &nbsp &nbsp Culorile au fost alese astfel incat sa introduca utilizatorul in lumea zoo intr-o maniera cat mai natural.</p> 
+            <br>
+            
+            <h3>Home</h3><br>
+            <p> &nbsp &nbsp ... </p> 
+            <br>
+
+
+            <h3>Animals</h3><br>
+            <p> &nbsp &nbsp O pagina ce se ocupa cu expunerea tuturor animalelor din zoo, pagina este formata dintr-un meniu de navigatie realizat intr-un mod destul de modern fiind utilizate niste culori aprinse in ton cu coloristica si frumusetea tuturor animalelor, din acest meniu se poate ajunge la toate paginile proiectului. 
+                O alta componenta a paginii este selectorul de animale, practic sunt prezentate diferite poze cu mai multe 
+                animale iar in momentul in care facem click pe poza, intram pe pagina respectivului animal (De mentionat ca in acest moment functioneaza pagina VulpePolara.html)</p> 
+            <br>
+
+            <h3>Animal Example</h3><br>
+            <p> &nbsp &nbsp Vulpe Polara reprezinta un exemplu de pagina pentru un animal, la nivelul acestei pagini gasim cateva caracteristici ale unui animal, clima si regiunile in care acesta este adaptat iar de asemenea in finalul paginii gasim cateva curiozitati. Culorile de pe aceasta pagina sunt destul de simpliste, utilizate in mod special pentru 
+                a nu fi perturbata atentia de la informatiile regasite in pagina.</p> 
+            <br>
+
+            <h3> About</h3><br>
+            <p>  &nbsp &nbsp ... </p> 
+            <br>
+
+            <h3>Help</h3><br>
+            <p> &nbsp &nbsp ...</p> 
+            <br>
+
+            <h3>Settings</h3><br>
+            <p> &nbsp &nbsp ...</p> 
+            <br>
+        </div>
+        
+        <div class="continut">
+            <h2>&nbsp &nbsp Tehnologii utilizate</h2>
+            <p>&nbsp &nbsp Zoo Web Manager utilizează HTML și CSS pentru a crea aspectul și funcționalitatea paginilor web. <br>
+                &nbsp &nbsp HTML (HyperText Markup Language) este un limbaj de marcare utilizat pentru structurarea și organizarea conținutului web. Aceasta include etichete și atribute care permit crearea de elemente precum texte, imagini, link-uri și formulare.
+              <br>&nbsp &nbsp CSS (Cascading Style Sheets) este un limbaj de stilizare utilizat pentru a da paginilor web un aspect atractiv și ușor de navigat. CSS permite modificarea proprietăților de afișare a elementelor HTML, cum ar fi culorile de fundal, dimensiunile fonturilor, marginile și poziționarea.
+            </p>
+          </div>
+        
+        <div class="continut">
+            <h2>Imagini utilizate</h2>
+            <p>
+                Imaginile utilizate in proiectul nostru au fost preluate de pe site-urile:
+                <li>https://www.wallpaperflare.com/</li>
+                <li>https://wallpapers.com/</li>
+            </p>
+        </div>
+
+        <div class="continut">
+            <h2>Autori</h2>
+            <ul>
+                <li>Curcudel Teodor</li>
+                <li>Enea Iustin</li>
+                <li>Hrebenciuc Alexandru</li>
+            </ul>
+          </div>
+     
+
+    </section>
+    
+    <div style="text-align: center;">
+        <img src="login_figma.png"><br><br>
+        <img src="resetpass_figma.png"><br><br>
+        <img src="register_figma.png"><br><br>
+        <img src="home_figma.png"><br><br>
+        <img src="animale_figma.png"><br><br>
+        <img src="exempluanimal_figma.png"><br><br> 
+    </div>
+
+    
+    <div class="footer">
+        <a href="index.html" class="hero-btn">Zoo Web Manager</a>
+
+    </div>
+ 
+
+  </body>
+
+ 
+</html>

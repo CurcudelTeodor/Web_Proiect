@@ -1,0 +1,151 @@
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Viga&display=swap');
+
+/* Define page layout */
+.page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+/* Style for left column */
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style for right column */
+.right {
+    padding: 20px;
+}
+
+/* Style for container */
+.container {
+    max-width: 430px;
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+    background-color: rgb(232, 227, 196);
+    padding: 25px 30px;
+    border-radius: 15px;
+}
+
+/* Style for title */
+.title {
+    font-family: 'Viga', sans-serif;
+    font-size: 3.5rem;
+}
+
+/* Style for title within container */
+.container .title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Style for underline beneath title */
+.container .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 95px;
+    background-color: rgb(162, 210, 145);
+}
+
+/* Style for user details within form */
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Style for input boxes within user details */
+form .user-details .input-box {
+    margin: 0 0 8px 0;
+    width: 100%;
+}
+
+/* Style for input fields within input boxes */
+.user-details .input-box input {
+    height: 45px;
+    width: 80%;
+    background-color:rgb(162, 210, 145);
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    min-width: 145px;
+}
+
+/* Style for details label within input boxes */
+.user-details .input-box .details {
+    font-weight: 500;
+}
+
+/* Style for submit button */
+.button {
+    background-color: rgb(28, 198, 0);
+    border-radius: 15px;
+    margin: 0 0 12px 0;
+    height: 45%;
+    min-width: 80px;
+    width: 25%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+/* Style for hover effect on submit button */
+.button:hover {
+    box-shadow: 0px 0px 20px rgb(28, 198, 0);
+    transform: scale(1.05);
+}
+
+/* Style for checkbox and label */
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox label {
+    font-size: 14px;
+    color: #000000;
+}
+
+/* Style for paragraph text */
+.p {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+body {
+    background-image: url('images/Raton.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  a{
+    color: rgb(28, 198, 0);
+  }
+  @media only screen and (max-width: 768px) 
+  {  body{
+    background-position: 50%;
+}
+    .page {
+        grid-template-columns: 2fr 1fr;
+    }
+    }
+    @media only screen and (max-width: 440px) 
+    {  body{
+        background-position: 50%;
+    }
+      .page {
+          grid-template-columns: 4fr 0fr;
+      }
+      }
