@@ -1,0 +1,33 @@
+type 
+    - Arthropod
+    - Amphibian
+    - Bird
+    - Fish
+    - Reptile
+    - Mammal
+
+region
+    - Africa
+    - Asia
+    - Antarctica
+    - Australia
+    - Europe
+    - North America
+    - South America
+
+climate
+    - Desert 
+    - Rainforest
+    - Savannah
+    - Taiga
+    - Tundra
+    - Temeperate
+
+conservation_status
+    - Not evaluated
+    - Critically endangered
+    - Least concern
+    - Near threatened
+    - Vulnerable
+    - Endangered
+
