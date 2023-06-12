@@ -72,7 +72,7 @@ form .user-details .input-box {
 .user-details .input-box input {
     height: 45px;
     width: 80%;
-    background-color:rgb(162, 210, 145);
+    background-color: rgb(162, 210, 145);
     border-radius: 15px;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
@@ -124,28 +124,34 @@ form .user-details .input-box {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
+
 body {
     background-image: url('images/Raton.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-  }
-  a{
-    color: rgb(28, 198, 0);
-  }
-  @media only screen and (max-width: 768px) 
-  {  body{
-    background-position: 50%;
 }
+
+a {
+    color: rgb(28, 198, 0);
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-position: 50%;
+    }
+
     .page {
         grid-template-columns: 2fr 1fr;
     }
-    }
-    @media only screen and (max-width: 440px) 
-    {  body{
+}
+
+@media only screen and (max-width: 440px) {
+    body {
         background-position: 50%;
     }
-      .page {
-          grid-template-columns: 4fr 0fr;
-      }
-      }
+
+    .page {
+        grid-template-columns: 4fr 0fr;
+    }
+}

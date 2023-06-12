@@ -72,7 +72,7 @@ form .user-details .input-box {
 .user-details .input-box input {
     height: 45px;
     width: 80%;
-    background-color:rgb(16, 184, 240);
+    background-color: rgb(16, 184, 240);
     border-radius: 15px;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
@@ -106,7 +106,7 @@ form .user-details .input-box {
 /* Style for checkbox and label */
 
 
- input[type="checkbox"] {
+input[type="checkbox"] {
     margin-right: 10px;
 }
 
@@ -115,37 +115,44 @@ form .user-details .input-box {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
+
 body {
     background-image: url('images/1.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-  }
-  a{
-    color: rgb(54, 246, 253)
-  }
-  @media only screen and (max-width: 768px) 
-  {  body{
-    background-position: 50%;
 }
-.container .title::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 120px;
-    background-color: rgb(54, 246, 253);
-}    
-.page {
-        grid-template-columns: 2fr 1fr;
-    }
-    }
-    @media only screen and (max-width: 440px) 
-    {  body{
+
+a {
+    color: rgb(54, 246, 253)
+}
+
+@media only screen and (max-width: 768px) {
+    body {
         background-position: 50%;
     }
-      .page {
-          grid-template-columns: 4fr 0fr;
-      }
-      }
+
+    .container .title::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 120px;
+        background-color: rgb(54, 246, 253);
+    }
+
+    .page {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    body {
+        background-position: 50%;
+    }
+
+    .page {
+        grid-template-columns: 4fr 0fr;
+    }
+}

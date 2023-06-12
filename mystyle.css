@@ -1,25 +1,24 @@
-*{
+* {
     padding: 0;
-    margin:0;
+    margin: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
 
 }
-:root{
-    --h2-font:3em;
-    --p-font:1.1em;
+
+:root {
+    --h2-font: 3em;
+    --p-font: 1.1em;
     --bg-color: pink;
-    --big-font:6rem;
+    --big-font: 6rem;
 
 }
-body {
-   
-  
-  }
 
-  header {
+body {}
+
+header {
     background-color: rgba(255, 0, 106, 0.5);
     position: fixed;
     top: 0;
@@ -30,125 +29,146 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 30px 170px;
-  color:aquamarine;
-     
-  }
-.navbar{
+    color: aquamarine;
+
+}
+
+.navbar {
     display: flex;
 
 }
-.navbar a{
+
+.navbar a {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
     font-weight: 500;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     padding: 10px 22px;
     border-radius: 4px;
     transition: ease .40s;
 }
-.navbar a:hover{
+
+.navbar a:hover {
     background: rgb(166, 255, 231);
-    color: blueviolet ;
+    color: blueviolet;
     box-shadow: 5px 10px 30px rgb(198, 202, 193);
 }
-#icon-menu{
+
+#icon-menu {
     font-size: 35px;
-   color:white;
-   cursor: pointer;
-   display: none;
+    color: white;
+    cursor: pointer;
+    display: none;
 }
-.icons div{
-color:rgb(255, 255, 255);
-font-size: 35px;
-margin-left: 2px;
-cursor: pointer;
+
+.icons div {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    margin-left: 2px;
+    cursor: pointer;
 }
-.logo{
-    color:rgb(255, 255, 255);
+
+.logo {
+    color: rgb(255, 255, 255);
     font-size: 35px;
     font-weight: 20;
     letter-spacing: 1px;
 }
-section{
+
+section {
     padding: 90px 3%;
 }
-.home{
+
+.home {
     position: relative;
     width: 100%;
     height: 100vh;
     background: url(images/t2.jpg);
     background-position: center center;
-      background-size: cover;
-display: grid;
-grid-template-columns: repeat(1,1fr);
-align-items: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
 }
-.home-text{
+
+.home-text {
     padding-top: 5%;
 }
-.home-text h1{
+
+.home-text h1 {
     font-size: 70px;
     font-family: 'Roboto', sans-serif;
     color: white;
 }
-.home-text p{
+
+.home-text p {
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
- color: white;
+    color: white;
 }
-.optiuni p{
+
+.optiuni p {
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
- color: white;
+    color: white;
 }
-.optiuni{
+
+.optiuni {
     display: flex;
 }
-.images{
+
+.images {
     width: 100px;
     height: 150px;
 }
-.images p:hover{
-    color:rgb(255, 0, 200);
+
+.images p:hover {
+    color: rgb(255, 0, 200);
 }
-.images p{
+
+.images p {
     font-size: 20px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
-.optiuni{
+
+.optiuni {
 
     padding-left: 23%;
     padding-right: 25%;
 }
-.optiuni div{
+
+.optiuni div {
     margin-right: 15%;
 
 }
-@media (max-width:1205px){
-    header{
-padding: 15px 3%;
-transition: .2s;
+
+@media (max-width:1205px) {
+    header {
+        padding: 15px 3%;
+        transition: .2s;
     }
 
 
-    .icons{
+    .icons {
         padding-left: 3%;
         transition: .2s;
         display: flex;
     }
-    .user-details{
-        
-    }
-    .navbar li{
+
+    .user-details {}
+
+    .navbar li {
         text-align: center;
     }
-    #icon-menu{
+
+    #icon-menu {
         display: inline-block;
     }
-    .navbar{
+
+    .navbar {
         position: absolute;
-        top:100%;
+        top: 100%;
         right: -100%;
         width: 300px;
         height: 40vh;
@@ -159,29 +179,34 @@ transition: .2s;
         padding: 50px 20px;
         transition: all .55s ease;
     }
-    .navbar a{
+
+    .navbar a {
         display: block;
         margin: 7px 0;
         margin-left: 0;
     }
-    .navbar.open{
+
+    .navbar.open {
         right: 0;
     }
 }
-@media (max-width:1107px){
-    .optiuni{
+
+@media (max-width:1107px) {
+    .optiuni {
         padding-top: 10%;
         padding-left: 0;
         padding-right: 20%;
         transition: .3s;
     }
 }
-@media (max-width:663px){
+
+@media (max-width:663px) {
     header {
         background-color: rgb(255, 111, 135);
         transition: 0.5s;
     }
-    .optiuni{
+
+    .optiuni {
         padding-top: 10%;
         padding-left: 40%;
         padding-right: 20%;
@@ -189,33 +214,38 @@ transition: .2s;
         display: flex;
         flex-direction: column;
     }
-    .home{
+
+    .home {
         width: 100%;
         height: 100%;
         background: url("images/t2.jpg");
         background-position: center center;
-          background-size: cover;
-          background-repeat: no-repeat;
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    align-items: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
     }
-    .images{
+
+    .images {
         margin-bottom: 0;
     }
-    .home-text h1{
+
+    .home-text h1 {
         font-size: 40px;
         font-family: 'Roboto', sans-serif;
         color: white;
     }
-    .home-text p{
+
+    .home-text p {
         margin-top: 10%;
         font-size: 20px;
         font-family: 'Roboto', sans-serif;
-     color: white;
+        color: white;
     }
 }
- /*
+
+/*
     button[type="submit"] {
         cursor: pointer;
       }
