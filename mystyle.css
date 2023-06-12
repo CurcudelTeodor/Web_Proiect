@@ -28,7 +28,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 170px;
+    padding: 30px 80px;
     color: aquamarine;
 
 }
@@ -264,3 +264,33 @@ section {
         height: 50px;
       }
     */
+
+.search_box{
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+}
+
+.search_box:hover input{
+    width: 400px;
+}
+
+.search_box input{
+    width:0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.search_box a .fas{
+    color: #1daf;
+    font-size: 18px;
+}
