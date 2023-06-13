@@ -337,33 +337,33 @@ p {
 } */
 
 .options button {
-  width: 100px;
-  height: 30px;
-  padding: 5px;
-  margin-top: 5px;
-  background-color: #73bb77;
-  background-image: linear-gradient(to bottom, #fe7864, #73bb77);
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 30px;
-  margin-left: 40px;
-  transition: background-color 0.3s ease;
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: #73bb77;
+    background-image: linear-gradient(to bottom, #fe7864, #73bb77);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-left: 40px;
+    transition: background-color 0.3s ease;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
 
 }
 
 .options button:hover {
-  background-color: #4CAF50;
+    background-color: #4CAF50;
 }
 
 .options button:focus {
-  outline: none;
+    outline: none;
 }
 
 .options button:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }
 
 
