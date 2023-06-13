@@ -1,67 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mystyle.css">
-    <link rel="stylesheet" href="aboutstyle.css">
-    <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="aboutstyle.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-        <a href="home.html" class="logo">WILD GROVE</a>
-        <ul class="navbar">
-        <li id="#home"><a href="home.html">HOME</a></li>
-        <li id="#animals"><a href="Animals.html">ANIMALS</a></li>
-        <li id="#despre"><a href="about.html">ABOUT US</a></li>
-        <li id="#help"><a href="help.html">HELP</a></li>
-         
+  <title>Document</title>
+
+  <!--Pentru iconita de search de la search bar-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+  <header>
+    <a href="home.html" class="logo">WILD GROVE</a>
+    <ul class="navbar">
+      <li id="#home"><a href="home.html">HOME</a></li>
+      <li id="#animals"><a href="Animals.html">ANIMALS</a></li>
+      <li id="#despre"><a href="about.html">ABOUT US</a></li>
+      <li id="#help"><a href="help.html">HELP</a></li>
+
     </ul>
+
+    <div class="search_box">
+      <input type="text" placeholder="Search...">
+      <a href="#">
+        <i class="fas fa-search"></i>
+      </a>
+    </div>
+
     <div class="icons">
-        <img src="images/search.png" alt="df">
-        <a href="config.html">  <img src="images/userdetail.png" alt="df"></a> 
-          <img src="images/menu.png" id="icon-menu" alt="df">
+      <!--<img src="images/search.png" alt="df">-->
+      <a href="config.html"> <img src="images/userdetail.png" alt="df"></a>
+      <img src="images/menu.png" id="icon-menu" alt="df">
     </div>
-</header>
-<script src="script.js"></script>
-<section class="team">
-    <div class="center"><h1 id="textmare">ECHIPA NOASTRA</h1></div>
-<div class="team-content">
-    <div class="box">
-    <img src="images/teo.png" alt="teo">
-    <h3>Curcudel Teodor</h3>
-    <p>Salut! Sunt Teo, iar aceasta este prima data cand
-        iau contact cu zona de dezvoltare web. Sunt o fire
-        timida, dar in acelasi timp sunt curios, tenace si
-        am o latura creativa.
-        Imi place sa fiu inconjurat de oameni de calitate, sinceri, 
-        care fac poze si au principii de viata si sunt de incredere. 
-        Tin sa mentionez ca sunt unul din cei doi roscati din grupa, 
-        lucru ce ne face o echipa speciala. </p>
+  </header>
+  <script src="script.js"></script>
+  <section class="team">
+    <div class="center">
+      <h1 id="textmare">ECHIPA NOASTRA</h1>
     </div>
-    <div class="box">
+    <div class="team-content">
+      <div class="box">
+        <img src="images/teo.png" alt="teo">
+        <h3>Curcudel Teodor</h3>
+        <p>Salut! Sunt Teo, iar aceasta este prima data cand
+          iau contact cu zona de dezvoltare web. Sunt o fire
+          timida, dar in acelasi timp sunt curios, tenace si
+          am o latura creativa.
+          Imi place sa fiu inconjurat de oameni de calitate, sinceri,
+          care fac poze si au principii de viata si sunt de incredere.
+          Tin sa mentionez ca sunt unul din cei doi roscati din grupa,
+          lucru ce ne face o echipa speciala. </p>
+      </div>
+      <div class="box">
         <img src="images/alex.png" alt="alex">
         <h3>Hrebenciuc Alexandru</h3>
-        <p>Salut! Eu sunt Alex, ma consider un om creativ, curios si descurcaret. Pasiunile mele sunt sportul, calatoritul si muzica. 
-            Desi acest proiect a fost prima mea
-             interactiune cu tehnologiile web, o consider o experienta placuta datorita lucrului in echipa
-              cu colegii mei, topicii proiectului si de asemenea datorita sansei de a invata lucruri noi. </p>  
-    </div>
-    <div class="box">
+        <p>Salut! Eu sunt Alex, ma consider un om creativ, curios si descurcaret. Pasiunile mele sunt sportul,
+          calatoritul si muzica.
+          Desi acest proiect a fost prima mea
+          interactiune cu tehnologiile web, o consider o experienta placuta datorita lucrului in echipa
+          cu colegii mei, topicii proiectului si de asemenea datorita sansei de a invata lucruri noi. </p>
+      </div>
+      <div class="box">
         <img src="images/iustin.png" alt="iustin">
         <h3>Enea Iustin</h3>
-        <p>Salut! Sunt Iustin si ma consider o persoana curioasa, creativa, dornica sa invete lucruri noi mai mereu. Imi place sa joc scrabble, 
-            sa calatoresc si ma uit la UFC si fotbal. Materia de Tehnologii Web mi se pare super interesanta, deoarece am "cochetat" cu Html si Css in clasa a 8-a, 
-        dar simt ca acum am ocazia sa invat cum functioneaza lucrurile mai bine. </p>
-        </div>
-</div>
-    
-</section>
-  </body>
+        <p>Salut! Sunt Iustin si ma consider o persoana curioasa, creativa, dornica sa invete lucruri noi mai mereu. Imi
+          place sa joc scrabble,
+          sa calatoresc si ma uit la UFC si fotbal. Materia de Tehnologii Web mi se pare super interesanta, deoarece am
+          "cochetat" cu Html si Css in clasa a 8-a,
+          dar simt ca acum am ocazia sa invat cum functioneaza lucrurile mai bine. </p>
+      </div>
+    </div>
+
+  </section>
+</body>
+
 </html>
