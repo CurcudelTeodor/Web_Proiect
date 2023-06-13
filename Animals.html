@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
   <title>Document</title>
   <!--Pentru iconita de search de la search bar-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -49,37 +50,53 @@
         <h3>Categories</h3>
         <br>
         <form method="post" action="animals-options.php">
-          <p>Mediu</p>
-          <select name="Mediu">
-            <option value="Option 0">Toate</option>
-            <option value="Option 1">Acvatic</option>
-            <option value="Option 2">Aerian</option>
-            <option value="Option 3">Terestru</option>
+          <p>Type</p>
+          <select name="Type">
+            <option value="Option 0">All</option>
+            <option value="Option 1">Arthropod</option>
+            <option value="Option 2">Amphibian</option>
+            <option value="Option 3">Bird</option>
+            <option value="Option 4">Fish</option>
+            <option value="Option 5">Reptile</option>
+            <option value="Option 6">Mammal</option>
           </select>
-          <p>Dieta</p>
-          <select name="Dieta">
-            <option value="Option 0">Toate</option>
-            <option value="Option 1">Carnivore</option>
-            <option value="Option 2">Erbivore</option>
-            <option value="Option 3">Omnivore</option>
-          </select>
-          <p>Habitat</p>
+          <p>Region</p>
           <select name="habitat">
-            <option value="Option 0">Toate</option>
-            <option value="Option 1">Padure</option>
-            <option value="Option 2">Desert</option>
-            <option value="Option 3">Polar</option>
+            <option value="Option 0">All</option>
+            <option value="Option 1">Africa</option>
+            <option value="Option 2">Asia</option>
+            <option value="Option 3">Antarctica</option>
+            <option value="Option 4">Australia</option>
+            <option value="Option 5">Europe</option>
+            <option value="Option 6">North America</option>
+            <option value="Option 6">South America</option>
+
+
           </select>
-          <p>Statut</p>
+          <p>Climate</p>
+          <select name="Climate">
+            <option value="Option 0">All</option>
+            <option value="Option 1">Desert</option>
+            <option value="Option 2">Rainforest</option>
+            <option value="Option 3">Savannah</option>
+            <option value="Option 4">Taiga</option>
+            <option value="Option 5">Tundra</option>
+            <option value="Option 6">Temperate</option>
+          </select>
+         
+          <p>Conservation status</p>
           <select name="Statut">
-            <option value="Option 0">Toate</option>
-            <option value="Option 1">Specie protejata</option>
-            <option value="Option 2">Pe cale de disparitie</option>
-            <option value="Option 3">Specie daunatoare</option>
+            <option value="Option 0">All</option>
+            <option value="Option 1">Not evaluated</option>
+            <option value="Option 2">Critically endangered</option>
+            <option value="Option 3">Least Concern</option>
+            <option value="Option 4">Near Threatened</option>
+            <option value="Option 5">Vulnerable</option>
+            <option value="Option 6">Endangered</option>
           </select>
 
           <br>
-          <button type="submit">Search</button>
+          <button type="submit" >Search</button>
         </form>
       </div>
     </div>
