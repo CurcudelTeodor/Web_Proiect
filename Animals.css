@@ -341,21 +341,24 @@ p {
     height: 30px;
     padding: 5px;
     margin-top: 5px;
-    background-color: #73bb77;
-    background-image: linear-gradient(to bottom, #fe7864, #73bb77);
+    background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 30px;
     margin-left: 40px;
-    transition: background-color 0.3s ease;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
 
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 }
 
 .options button:hover {
-    background-color: #4CAF50;
+    background-color: #73bb77;
+    background: linear-gradient(to bottom, #fe7864, #73bb77);
+
 }
 
 .options button:focus {
@@ -365,8 +368,6 @@ p {
 .options button:active {
     transform: scale(0.95);
 }
-
-
 
 .img2 {
     width: 24px;
