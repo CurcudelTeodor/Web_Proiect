@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,31 +7,30 @@
     <title>Register</title>
     <link rel="stylesheet" href="Register.css">
 </head>
-
 <body>
     <div class="page">
         <div class="left">
             <div class="container">
                 <div class="title">Register</div>
                 <p>Join the wonderful world of animals!</p>
-                <form action="#">
+                <form action="signup.php" method="POST">
                     <div class="user-details">
-                        <div class="input-box">
-                            <input type="text" placeholder="Username" required>
+                        <div class ="input-box">
+                            <input type="text" name="username" placeholder="Username" required>
                         </div>
-                        <div class="input-box">
-                            <input type="password" placeholder="New Password" required>
+                        <div class ="input-box">
+                            <input type="password" name="password" placeholder="New Password" required>
                         </div>
-                        <div class="input-box">
-                            <input type="password" placeholder="Confirm Password" required>
+                        <div class ="input-box">
+                            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
                         </div>
-                        <div class="input-box">
-                            <input type="text" placeholder="Email" required>
+                        <div class ="input-box">
+                            <input type="email" name="email" placeholder="Email" required>
                         </div>
                     </div>
                     <div class="button-class">
                         <input type="submit" value="Register" class="button">
-                    </div>
+                    </div>  
                     <label class="checkbox-container">
                         <input type="checkbox" required>
                         <span class="checkmark"></span>
@@ -40,14 +38,8 @@
                     </label>
                 </form>
             </div>
-
         </div>
-        <div class="right">
-
-        </div>
+        <div class="right"></div>
     </div>
-
-
 </body>
-
 </html>
