@@ -32,9 +32,25 @@
 
           for (var i = 0; i < response.length; i++) {
             var animal = response[i];
-            var listItem = document.createElement('li');
-            listItem.textContent = animal.name;
-            animalList.appendChild(listItem);
+            // Create a container for the animal item
+            var animalItem = document.createElement('div');
+            animalItem.classList.add('animal-item');
+
+            // Create an image element for the animal's picture
+            var image = document.createElement('img');
+            image.src = 'images/' + animal.name.toLowerCase() + '.jpg'; // Assuming images are stored in a folder named "images"
+            image.alt = animal.name;
+
+            // Create a heading element for the animal's name
+            var heading = document.createElement('h3');
+            heading.textContent = animal.name;
+
+            // Append the image and heading elements to the animal item container
+            animalItem.appendChild(image);
+            animalItem.appendChild(heading);
+
+            // Append the animal item container to the animal list
+            animalList.appendChild(animalItem);
           }
         }
       };
@@ -136,7 +152,7 @@
 
       <!-- Animal list container -->
       <ul id="animal-list"></ul>
-      
+
       <a href="VulpeaPolara.html"><img src="images/vulpea-polara.jpg" alt="imagine1"></a>
 
       <img src="images/Vultur-sur.jpg" alt="imagine2">
