@@ -5,7 +5,7 @@ class Database
     private $host = "localhost";
     private $username = "root";
     private $password = "";
-    private $db = "useri";
+    private $db = "zoo";
 
     function connect()
     {

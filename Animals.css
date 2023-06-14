@@ -262,36 +262,15 @@ p {
     width: calc(100vw - 320px);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
-    column-gap: 10px;
-    row-gap: 10px;
+    column-gap: 30px;
+    /* Increase the column gap to add spacing between images */
+    row-gap: 20px;
+    /* Increase the row gap to add spacing between rows */
     overflow: auto;
 }
 
-.animal-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #f2f2f2;
-    padding: 10px;
-    border-radius: 10px;
-    width: 100%;
-  }
-  
-  .animal-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  
-  .animal-item h3 {
-    margin: 0;
-    font-size: 16px;
-  }
-  
+
+
 .filter-wrapper {
     position: absolute;
     top: 200px;
@@ -404,6 +383,21 @@ img {
     height: 300px;
     object-fit: cover;
     object-position: center;
+
+}
+
+.animal-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s;
+    /* Add a transition effect for smooth animation */
+}
+
+.animal-image:hover {
+    transform: scale(1.1);
+    /* Apply a scale transform to make the image slightly bigger */
 }
 
 a {

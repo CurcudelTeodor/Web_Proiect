@@ -43,6 +43,9 @@ if (!empty($selectedStatus)) {
   $params['status'] = $selectedStatus;
 }
 
+// Add the ORDER BY clause to sort the animals by name
+$sql .= " ORDER BY name ASC";
+
 //preparam si executam query-ul (cu optiunile din filtre)
 $stmt = $pdo->prepare($sql);
 $stmt->execute($params);
@@ -52,13 +55,20 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 if (count($result) > 0) {
   //pregatim array-ul pentru raspuns
   $response = array();
-  
+
   foreach ($result as $row) {
     //adaugam fiecare animal (care corespunde filtrarii) la response 
     $animal = array(
       'id' => $row['id'],
       'name' => $row['name'],
       'science_name' => $row['science_name'],
+      'type' => $row['type'],
+      'region' => $row['region'],
+      'climate' => $row['climate'],
+      'conservation_status' => $row['conservation_status'],
+      'description' => $row['description'],
+      'min_weight' => $row['min_weight'],
+      'max_weight' => $row['max_weight'],
       //adaugam alte campuri dupa nevoie
     );
     $response[] = $animal;
@@ -66,7 +76,7 @@ if (count($result) > 0) {
 
   //convertim array-ul pt raspuns in JSON
   $jsonResponse = json_encode($response);
-  
+
   //trimitem JSON-ul la client (browser)
   header('Content-Type: application/json');
   echo $jsonResponse;

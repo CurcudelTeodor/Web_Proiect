@@ -15,51 +15,8 @@
   <!--Pentru iconita de search de la search bar-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-  <script>
-    function getAnimalOptions() {
-      var xhr = new XMLHttpRequest();
-      var form = document.getElementById('animal-form');
-
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          // Handle the response from animals-options.php
-          var response = JSON.parse(xhr.responseText);
-
-          // Update the page content based on the response
-          // You can modify this part to suit your needs
-          var animalList = document.getElementById('animal-list');
-          animalList.innerHTML = ''; // Clear previous content
-
-          for (var i = 0; i < response.length; i++) {
-            var animal = response[i];
-            // Create a container for the animal item
-            var animalItem = document.createElement('div');
-            animalItem.classList.add('animal-item');
-
-            // Create an image element for the animal's picture
-            var image = document.createElement('img');
-            image.src = 'images/' + animal.name.toLowerCase() + '.jpg'; // Assuming images are stored in a folder named "images"
-            image.alt = animal.name;
-
-            // Create a heading element for the animal's name
-            var heading = document.createElement('h3');
-            heading.textContent = animal.name;
-
-            // Append the image and heading elements to the animal item container
-            animalItem.appendChild(image);
-            animalItem.appendChild(heading);
-
-            // Append the animal item container to the animal list
-            animalList.appendChild(animalItem);
-          }
-        }
-      };
-
-      xhr.open('POST', 'animals-options.php', true);
-      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
-      xhr.send(new URLSearchParams(new FormData(form)).toString());
-    }
-  </script>
+  <!-- Other head elements -->
+  <script src="animals_script.js"></script>
 
 
 </head>
@@ -118,6 +75,7 @@
             <option value="Europe">Europe</option>
             <option value="North America">North America</option>
             <option value="South America">South America</option>
+            <option value="Circumpolar">Circumpolar</option>
 
 
           </select>
@@ -129,6 +87,7 @@
             <option value="Savannah">Savannah</option>
             <option value="Taiga">Taiga</option>
             <option value="Tundra">Tundra</option>
+            <option value="Arctic tundra">Arctic tundra</option>
             <option value="Temperate">Temperate</option>
           </select>
 
@@ -148,29 +107,39 @@
         </form>
       </div>
     </div>
-    <div class="main">
+    <div id="animal-list" class="main">
 
-      <!-- Animal list container -->
-      <ul id="animal-list"></ul>
 
-      <a href="VulpeaPolara.html"><img src="images/vulpea-polara.jpg" alt="imagine1"></a>
-
-      <img src="images/Vultur-sur.jpg" alt="imagine2">
-      <img src="images/Cameleon.jpg" alt="imagine3">
-      <img src="images/elefantul-african.jpg" alt="imagine4">
-      <img src="images/Leu-African.jpg" alt="imagine5">
-      <img src="images/rinocer-alb.jpg" alt="imagine6">
-      <img src="images/tigru-bengalez.jpg" alt="imagine7">
-      <img src="images/Cerb-Carpatin.jpg" alt="imagine8">
-      <img src="images/zebra.jpg" alt="imagine9">
-      <img src="images/Urs-brun.jpg" alt="imagine10">
-      <img src="images/veverita-zburatoare.jpeg" alt="imagine11">
-      <img src="images/iguana-verde.jpg" alt="imagine12">\
 
     </div>
 
 
   </div>
+
+
+  <script>
+    // Assuming you have a class or selector to target the animal images, such as '.animal-image'
+    var animalList = document.getElementById('animal-list');
+
+    // Add a click event listener to the parent container of animal images
+    animalList.addEventListener('click', function (event) {
+      // Check if the clicked element has the 'animal-image' class
+      if (event.target.classList.contains('animal-image')) {
+        // Get the clicked image element
+        var image = event.target;
+
+        // Get the animal ID or name from the image's data attribute or any other source
+        var animalID = image.dataset.animalId; // Assuming you have a data attribute 'data-animal-id' with the animal ID
+        
+        // Construct the URL for the animal page
+        var animalPageURL = 'http://localhost/Zoo/Web_Proiect/animal-api.php?id=' + animalID;
+
+        // Redirect the user to the animal page
+        window.location.href = animalPageURL;
+      }
+    });
+  </script>
+
 </body>
 
 </html>
