@@ -1,19 +1,4 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  $selectedType = $_POST['Type'];
-  $selectedHabitat = $_POST['habitat'];
-  $selectedClimate = $_POST['Climate'];
-  $selectedStatus = $_POST['Statut'];
-
-  echo "Selected Type: " . $selectedType . "<br>";
-  echo "Selected Habitat: " . $selectedHabitat . "<br>";
-  echo "Selected Climate: " . $selectedClimate . "<br>";
-  echo "Selected Status: " . $selectedStatus . "<br>";
-}
-?>
-
-
-<?php
 //facem conexiunea
 $host = 'localhost';
 $dbname = 'zoo';
@@ -26,6 +11,13 @@ try {
 } catch (PDOException $e) {
   die('Connection failed: ' . $e->getMessage());
 }
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  $selectedType = $_POST['Type'];
+  $selectedHabitat = $_POST['Habitat'];
+  $selectedClimate = $_POST['Climate'];
+  $selectedStatus = $_POST['Status'];
+}
+
 
 //facem query-ul bazandu-ne pe filtrele primite din frontend
 $sql = "SELECT * FROM animals WHERE 1=1";
@@ -58,14 +50,36 @@ $stmt->execute($params);
 //lua rezultatele din bd si le afisam (deocamdata)
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 if (count($result) > 0) {
+  //pregatim array-ul pentru raspuns
+  $response = array();
+  
   foreach ($result as $row) {
-    echo "ID: " . $row['id'] . "<br>";
-    echo "Name: " . $row['name'] . "<br>";
-    echo "Science Name: " . $row['science_name'] . "<br>";
-    //afisam alte coloane dupa nevoie...
-    echo "<br>";
+    //adaugam fiecare animal (care corespunde filtrarii) la response 
+    $animal = array(
+      'id' => $row['id'],
+      'name' => $row['name'],
+      'science_name' => $row['science_name'],
+      //adaugam alte campuri dupa nevoie
+    );
+    $response[] = $animal;
   }
+
+  //convertim array-ul pt raspuns in JSON
+  $jsonResponse = json_encode($response);
+  
+  //trimitem JSON-ul la client (browser)
+  header('Content-Type: application/json');
+  echo $jsonResponse;
 } else {
-  echo "No animals found.";
+  //nu am gasit animale (count($result<0))
+  $response = array(
+    'message' => 'No animals found.'
+  );
+
+  //convertim array-ul pt raspuns in JSON
+  $jsonResponse = json_encode($response);
+
+  //trimitem JSON-ul la client (browser)
+  header('Content-Type: application/json');
+  echo $jsonResponse;
 }
-?>

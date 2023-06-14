@@ -15,6 +15,37 @@
   <!--Pentru iconita de search de la search bar-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+  <script>
+    function getAnimalOptions() {
+      var xhr = new XMLHttpRequest();
+      var form = document.getElementById('animal-form');
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          // Handle the response from animals-options.php
+          var response = JSON.parse(xhr.responseText);
+
+          // Update the page content based on the response
+          // You can modify this part to suit your needs
+          var animalList = document.getElementById('animal-list');
+          animalList.innerHTML = ''; // Clear previous content
+
+          for (var i = 0; i < response.length; i++) {
+            var animal = response[i];
+            var listItem = document.createElement('li');
+            listItem.textContent = animal.name;
+            animalList.appendChild(listItem);
+          }
+        }
+      };
+
+      xhr.open('POST', 'animals-options.php', true);
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
+      xhr.send(new URLSearchParams(new FormData(form)).toString());
+    }
+  </script>
+
+
 </head>
 
 <body>
@@ -49,7 +80,8 @@
       <div class="options">
         <h3>Categories</h3>
         <br>
-        <form method="post" action="animals-options.php">
+        <!-- Form modified to include an ID and an onsubmit event -->
+        <form id="animal-form" onsubmit="event.preventDefault(); getAnimalOptions();">
           <p>Type</p>
           <select name="Type">
             <option value="">All</option>
@@ -61,7 +93,7 @@
             <option value="Mammal">Mammal</option>
           </select>
           <p>Region</p>
-          <select name="habitat">
+          <select name="Habitat">
             <option value="">All</option>
             <option value="Africa">Africa</option>
             <option value="Asia">Asia</option>
@@ -85,7 +117,7 @@
           </select>
 
           <p>Conservation status</p>
-          <select name="Statut">
+          <select name="Status">
             <option value="">All</option>
             <option value="Not evaluated">Not evaluated</option>
             <option value="Critically endangered">Critically endangered</option>
@@ -102,6 +134,9 @@
     </div>
     <div class="main">
 
+      <!-- Animal list container -->
+      <ul id="animal-list"></ul>
+      
       <a href="VulpeaPolara.html"><img src="images/vulpea-polara.jpg" alt="imagine1"></a>
 
       <img src="images/Vultur-sur.jpg" alt="imagine2">
@@ -114,7 +149,8 @@
       <img src="images/zebra.jpg" alt="imagine9">
       <img src="images/Urs-brun.jpg" alt="imagine10">
       <img src="images/veverita-zburatoare.jpeg" alt="imagine11">
-      <img src="images/iguana-verde.jpg" alt="imagine12">
+      <img src="images/iguana-verde.jpg" alt="imagine12">\
+
     </div>
 
 
