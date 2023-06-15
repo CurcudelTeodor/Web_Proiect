@@ -400,7 +400,7 @@ img {
     /* Apply a scale transform to make the image slightly bigger */
 }
 
-a {
+.search_box > button {
     text-decoration: none;
     color: white;
     font-size: 20px;

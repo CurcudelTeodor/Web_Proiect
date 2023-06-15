@@ -34,10 +34,13 @@
       </ul>
 
       <div class="search_box">
-        <input type="text" placeholder="Search...">
-        <a href="#">
-          <i class="fas fa-search"></i>
-        </a>
+        
+        <form id="search-form" onsubmit="event.preventDefault(); searchAnimals();">
+          <input type="text" id="search-input" placeholder="Cauta animale...">
+          <button type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
       </div>
 
       <div class="iconss">
