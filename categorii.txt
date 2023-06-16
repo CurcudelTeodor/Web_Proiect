@@ -14,6 +14,7 @@ region
     - Europe
     - North America
     - South America
+    - Circumpolar
 
 climate
     - Desert 
@@ -22,6 +23,7 @@ climate
     - Taiga
     - Tundra
     - Temeperate
+    - Arctic tundra
 
 conservation_status
     - Not evaluated
