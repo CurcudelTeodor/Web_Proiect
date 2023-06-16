@@ -1,3 +1,9 @@
+@font-face {
+    font-family: jungle;
+    src: url(Heartjungle.ttf);
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -267,6 +273,7 @@ p {
     row-gap: 20px;
     /* Increase the row gap to add spacing between rows */
     overflow: auto;
+    padding-top: 20px;
 }
 
 
@@ -383,19 +390,25 @@ img {
     height: 300px;
     object-fit: cover;
     object-position: center;
-
+    border-radius: 15px;
+    transition: transform 0.5s;
 }
 
-.animal-image {
+img:hover{
+    transform: scale(1.1);
+    
+}
+.animal-image img{
     width: 300px;
     height: 300px;
     object-fit: cover;
     object-position: center;
     transition: transform 0.5s;
     /* Add a transition effect for smooth animation */
+    border-radius: 15px;
 }
 
-.animal-image:hover {
+.animal-image img:hover {
     transform: scale(1.1);
     /* Apply a scale transform to make the image slightly bigger */
 }

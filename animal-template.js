@@ -5,18 +5,30 @@ var animalId = searchParams.get('animal');
 
 // Fetch the animal data from the server using the animal name
 fetch('http://localhost/Zoo/Web_Proiect/animal-api.php?name=' + encodeURIComponent(animalName))
-  .then(function(response) {
+  .then(function (response) {
     return response.json();
   })
-  .then(function(animal) {
+  .then(function (animal) {
     // Populate the template with the animal data
-    document.getElementById('animal-name').textContent = animal.name;
-    document.getElementById('animal-scientific-name').textContent = animal.scientific_name;
-    document.getElementById('animal-conservation-status').textContent = 'Conservation Status: ' + animal.conservation_status;
-    document.getElementById('animal-type').textContent = 'Type: ' + animal.type;
-    document.getElementById('animal-climate').textContent = 'Climate: ' + animal.climate;
-    document.getElementById('animal-description').textContent = animal.description;
+    document.getElementById('animal-nameT').textContent = animal.name;
+    document.getElementById('animal-scientific-nameT').textContent = animal.scientific_name;
+    document.getElementById('animal-conservation-statusT').textContent = 'Conservation Status: ' + animal.conservation_status;
+    document.getElementById('animal-typeT').textContent = 'Animal type: ' + animal.type;
+    document.getElementById('animal-climateT').textContent = 'Climate: ' + animal.climate;
+    document.getElementById('animal-descriptionT').textContent = animal.description;
+
+    // Get the animal image and update the HTML
+    var animalImageElement = document.getElementById('animal-imageT');
+    var animalImage = document.createElement('img');
+    animalImage.src = 'images/' + animal.name.toLowerCase().replace(/ /g, '_') + '.jpg';
+    animalImage.alt = animal.name;
+    animalImageElement.appendChild(animalImage);
+
+    document.getElementById('min-weightT').textContent = 'Minimum weight: ' + animal.min_weight + ' kg';
+    document.getElementById('max-weightT').textContent = 'Maximum weight: ' + animal.max_weight + ' kg';
+
+
   })
-  .catch(function(error) {
+  .catch(function (error) {
     console.log('Error:', error);
   });

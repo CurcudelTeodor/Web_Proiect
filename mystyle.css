@@ -1,3 +1,8 @@
+@font-face {
+    font-family: jungle;
+    src: url(Heartjungle.ttf);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -16,7 +21,7 @@
 
 }
 
-body {}
+/* body {} */
 
 header {
     background-color: rgba(255, 0, 106, 0.5);
@@ -69,6 +74,7 @@ header {
 }
 
 .logo {
+    font-family: jungle, Vega, sans-serif;
     color: rgb(255, 255, 255);
     font-size: 35px;
     font-weight: 20;
@@ -194,7 +200,7 @@ section {
         display: flex;
     }
 
-    .user-details {}
+    /* .user-details {} */
 
     .navbar li {
         text-align: center;
@@ -246,9 +252,9 @@ section {
 /* Media query for screen width less than 720px */
 @media (max-width: 720px) {
     .search_box:hover input {
-      width: 100px;
+        width: 100px;
     }
-  }
+}
 
 
 @media (max-width:663px) {
@@ -315,4 +321,3 @@ section {
         height: 50px;
       }
     */
-

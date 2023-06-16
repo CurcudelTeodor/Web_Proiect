@@ -24,7 +24,8 @@
 <body>
   <div class="page">
     <header>
-      <a href="home.html" class="logo">WILD GROVE</a>
+      
+      <a href="home.html" class="logo" style="font-family: 'jungle', 'Viga', sans-serif;">WILD GROVE</a>
       <ul class="navbar">
         <li id="#home"><a href="home.html">HOME</a></li>
         <li id="#animals"><a href="Animals.html">ANIMALS</a></li>
@@ -34,7 +35,7 @@
       </ul>
 
       <div class="search_box">
-        
+
         <form id="search-form" onsubmit="event.preventDefault(); searchAnimals();">
           <input type="text" id="search-input" placeholder="Cauta animale...">
           <button type="submit">
@@ -118,7 +119,10 @@
 
 
   </div>
-
+  <!--Pentru a lua toate animalele din bd cand incarcam pentru prima data pagina de animale-->
+  <script>
+    getAnimalOptions();
+  </script>
 
   <script>
     // Assuming you have a class or selector to target the animal images, such as '.animal-image'
@@ -130,18 +134,17 @@
       if (event.target.classList.contains('animal-image')) {
         // Get the clicked image element
         var image = event.target;
-
         // Get the animal ID or name from the image's data attribute or any other source
-        var animalID = image.dataset.animalId; // Assuming you have a data attribute 'data-animal-id' with the animal ID
-        
-        // Construct the URL for the animal page
-        var animalPageURL = 'http://localhost/Zoo/Web_Proiect/animal-api.php?id=' + animalID;
+        var animalName = image.dataset.animalName; // Assuming you have a data attribute 'data-animal-id' with the animal ID
 
+        // Construct the URL for the animal page
+        var animalPageURL = 'http://localhost/Zoo/Web_Proiect/animal-api.php?name=' + encodeURIComponent(animalName);
         // Redirect the user to the animal page
         window.location.href = animalPageURL;
       }
     });
   </script>
+
 
 </body>
 
