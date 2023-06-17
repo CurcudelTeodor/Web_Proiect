@@ -11,7 +11,7 @@ fetch('http://localhost/Zoo/Web_Proiect/animal-api.php?name=' + encodeURICompone
   .then(function (animal) {
     // Populate the template with the animal data
     document.getElementById('animal-nameT').textContent = animal.name;
-    document.getElementById('animal-scientific-nameT').textContent = animal.scientific_name;
+    document.getElementById('animal-scientific-nameT').textContent = 'Scientific name: ' + animal.science_name;
     document.getElementById('animal-conservation-statusT').textContent = 'Conservation Status: ' + animal.conservation_status;
     document.getElementById('animal-typeT').textContent = 'Animal type: ' + animal.type;
     document.getElementById('animal-climateT').textContent = 'Climate: ' + animal.climate;
