@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Animals.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <!--Pentru iconita de search de la search bar-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- Other head elements -->
+  <script src="mammal_script.js"></script>
+  <script src="animals_script.js"></script>
+
+
+
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <a href="home.php" class="logo" style="font-family: 'jungle', 'Viga', sans-serif;">WILD GROVE</a>
+      <ul class="navbar">
+        <li id="#home"><a href="home.php">HOME</a></li>
+        <li id="#animals"><a href="Animals.php">ANIMALS</a></li>
+        <li id="#despre"><a href="about.php">ABOUT US</a></li>
+        <li id="#help"><a href="help.php">HELP</a></li>
+
+      </ul>
+
+      <div class="search_box">
+        
+        <form id="search-form" onsubmit="event.preventDefault(); searchAnimals();">
+          <input type="text" id="search-input" placeholder="Cauta animale...">
+          <button type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="iconss">
+        <!-- <img src="images/search.png" alt="f" class="img2"> -->
+        <a href="config.html"> <img src="images/userdetail.png" alt="ff" class="img2"></a>
+        <img src="images/menu.png" id="icon-menu" alt="fff" class="img2">
+      </div>
+    </header>
+    <script src="script.js"></script>
+
+
+    <div class="filter-wrapper">
+      <div class="options">
+        <h3>Categories</h3>
+        <br>
+        <!-- Form modified to include an ID and an onsubmit event -->
+        <form id="animal-form" onsubmit="event.preventDefault(); getAnimalOptions();">
+          <p>Type</p>
+          <select name="Type">
+            <option value="">All</option>
+            <option value="Arthropod">Arthropod</option>
+            <option value="Amphibian">Amphibian</option>
+            <option value="Bird">Bird</option>
+            <option value="Fish">Fish</option>
+            <option value="Reptile">Reptile</option>
+            <option value="Mammal">Mammal</option>
+          </select>
+          <p>Region</p>
+          <select name="Habitat">
+            <option value="">All</option>
+            <option value="Africa">Africa</option>
+            <option value="Asia">Asia</option>
+            <option value="Antarctica">Antarctica</option>
+            <option value="Australia">Australia</option>
+            <option value="Europe">Europe</option>
+            <option value="North America">North America</option>
+            <option value="South America">South America</option>
+            <option value="Circumpolar">Circumpolar</option>
+
+
+          </select>
+          <p>Climate</p>
+          <select name="Climate">
+            <option value="">All</option>
+            <option value="Desert">Desert</option>
+            <option value="Rainforest">Rainforest</option>
+            <option value="Savannah">Savannah</option>
+            <option value="Taiga">Taiga</option>
+            <option value="Tundra">Tundra</option>
+            <option value="Arctic tundra">Arctic tundra</option>
+            <option value="Temperate">Temperate</option>
+          </select>
+
+          <p>Conservation status</p>
+          <select name="Status">
+            <option value="">All</option>
+            <option value="Not evaluated">Not evaluated</option>
+            <option value="Critically endangered">Critically endangered</option>
+            <option value="Least Concern">Least Concern</option>
+            <option value="Near Threatened">Near Threatened</option>
+            <option value="Vulnerable">Vulnerable</option>
+            <option value="Endangered">Endangered</option>
+          </select>
+
+          <br>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+    <div id="animal-list" class="main">
+
+
+
+    </div>
+
+
+  </div>
+
+    <!--Pentru a lua toate animalele din bd cand incarcam pentru prima data pagina de animale-->
+    <script>
+      getMammalOptions();
+    </script>
+
+  <script>
+    // Assuming you have a class or selector to target the animal images, such as '.animal-image'
+    var animalList = document.getElementById('animal-list');
+
+    // Add a click event listener to the parent container of animal images
+    animalList.addEventListener('click', function (event) {
+      // Check if the clicked element has the 'animal-image' class
+      if (event.target.classList.contains('animal-image')) {
+        // Get the clicked image element
+            // Get the animal ID or name from the image's data attribute or any other source
+        var animalName = image.dataset.animalName; // Assuming you have a data attribute 'data-animal-id' with the animal ID
+   
+        var animalPageURL = 'http://localhost:81/Zoo/Web_Proiect/animal-api.php?name=' + encodeURIComponent(animalName);
+    
+
+        // Redirect the user to the animal page
+        window.location.href = animalPageURL;
+      }
+    });
+  </script>
+
+</body>
+
+</html>

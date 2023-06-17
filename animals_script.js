@@ -8,7 +8,6 @@ function getAnimalOptions() {
         var response = JSON.parse(xhr.responseText);
   
         // Update the page content based on the response
-        // You can modify this part to suit your needs
         var animalList = document.getElementById('animal-list');
         animalList.innerHTML = ''; // Clear previous content
   
