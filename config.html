@@ -19,12 +19,12 @@
 
 <body>
   <header>
-    <a href="home.html" class="logo">WILD GROVE</a>
+    <a href="home.php" class="logo">WILD GROVE</a>
     <ul class="navbar">
-      <li id="#home"><a href="home.html">HOME</a></li>
-      <li id="#animals"><a href="Animals.html">ANIMALS</a></li>
-      <li id="#despre"><a href="about.html">ABOUT US</a></li>
-      <li id="#help"><a href="help.html">HELP</a></li>
+      <li id="#home"><a href="home.php">HOME</a></li>
+      <li id="#animals"><a href="Animals.php">ANIMALS</a></li>
+      <li id="#despre"><a href="about.php">ABOUT US</a></li>
+      <li id="#help"><a href="help.php">HELP</a></li>
 
     </ul>
 
@@ -54,7 +54,7 @@
     <div class="logout">
       <h3>Logout</h3>
       <div class="btn-group">
-        <button class="buttonspace">Logout</button>
+        <button class="buttonspace" onclick="logout()">Logout</button>
       </div>
     </div>
     <div class="theme">
@@ -66,5 +66,31 @@
     </div>
   </section>
 </body>
-
+<script>
+  function logout() {
+    // Create an AJAX request
+    var xhr = new XMLHttpRequest();
+    
+    // Define the PHP file URL where you will handle the logout process
+    var url = "logout.php";
+    
+    // Set up the AJAX request
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    // Define the data to be sent
+    var data = "logout=true";
+    
+    // Perform the AJAX request
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        // Redirect to login.html after successful logout
+        window.location.href = "login.html";
+      }
+    };
+    
+    // Send the request
+    xhr.send(data);
+  }
+  </script>
 </html>
