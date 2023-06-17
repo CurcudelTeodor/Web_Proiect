@@ -1,31 +1,39 @@
+@font-face {
+  font-family: jungle;
+  src: url(Heartjungle.ttf);
+}
+
+
 .animal-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
 }
 
 
 .animal-details {
-    grid-column: 1 / span 2;
-    grid-row: 1 / 3;
-    padding: 20px;
-    /* border-right: 2px solid black;
+  grid-column: 1 / span 2;
+  grid-row: 1 / 3;
+  padding: 20px;
+  /* border-right: 2px solid black;
   border-bottom: 2px solid black; */
-    margin-top: 100px;
-    margin-left: 100px;
+  margin-top: 100px;
+  margin-left: 100px;
 }
 
 #animal-nameT {
-    position: relative;
-
-    margin-right: 100px;
-    text-align: center;
-    color: grey;
-    animation: calm_up_and_down 2s infinite;
+  font-family: jungle;
+  position: relative;
+  margin-right: 100px;
+  text-align: center;
+  color: grey;
+  animation: calm_up_and_down 2s infinite;
+  z-index: 1;
 }
+
 #animal-nameT:hover{
-    color:  rgba(255, 0, 106, 0.5) !important;
+  color: rgba(255, 0, 106, 0.5) !important;
 }
 
 /* 
@@ -40,81 +48,188 @@
     transform-origin: bottom;
     animation: wave 2s ease-in-out infinite;
   } */
-  
+
 
 
 .animal-details p {
-    margin-bottom: 10px;
-    /* Add a space of 10px between the paragraphs */
+  margin-bottom: 10px;
+  /* Add a space of 10px between the paragraphs */
 }
 
 p {
-    color: grey;
-    font-size: 20px;
+  color: grey;
+  font-size: 20px;
 
 }
 
 
 #animal-imageT {
-    text-align: center;
-    grid-column: 2 / 3;
-    grid-row: 1 / 3;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* border-bottom: 2px solid black; */
-    margin-top: 140px;
-    margin-left: 50px;
-    z-index: 1;
-    /* Add z-index property to bring the image to the front */
+  text-align: center;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* border-bottom: 2px solid black; */
+  margin-top: 200px;
+  margin-left: 50px;
+  z-index: 1;
+  /* Add z-index property to bring the image to the front */
 }
 
 #animal-imageT img {
-    transition: transform 0.5s;
+  transition: transform 0.5s;
 }
 
 #animal-imageT img:hover {
-    transform: scale(1.1);
-    /* Apply a scale transform to make the image slightly bigger */
+  transform: scale(1.1);
+  /* Apply a scale transform to make the image slightly bigger */
 }
 
 #animal-descriptionT {
-    
-    grid-column: 1 / span 2;
-    grid-row: 3 / 4;
-    padding: 20px;
-    /* border-top: 2px solid black; */
-    margin-top: 100px;
-    font-size: 22px;
-    line-height: 1.5;
-    
+
+  grid-column: 1 / span 2;
+  grid-row: 3 / 4;
+  padding: 20px;
+  /* border-top: 2px solid black; */
+  margin-top: 100px;
+  font-size: 22px;
+  line-height: 1.5;
+  padding-top:50px;
+
 }
 
 .wave {
-    display: inline-block;
-    animation: wave 1s ease-in-out infinite;
-  }
+  display: inline-block;
+  animation: wave 1s ease-in-out infinite;
+}
 
 @keyframes wave {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
   }
 
-@keyframes calm_up_and_down {
-    0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-      100% {
-        transform: translateY(0);
-      }
+  50% {
+    transform: translateY(-5px);
   }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes calm_up_and_down {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.download-button {
+  padding: 10px 20px;
+  background-color: #FF006A;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.download-button i {
+  margin-right: 5px;
+}
+
+.btn-slide2 span.circle2,
+.btn-slide2:hover {
+  background-color: #efa666
+}
+
+.btn-slide2 {
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  line-height: 50px;
+  padding: 0;
+  border-radius: 50px;
+  background: #fdfdfd;
+  margin: 10px;
+  transition: .5s;
+  border: 2px solid #efa666;
+  fill: black
+}
+
+.btn-slide2 svg {
+  fill: white;
+  width: 22px;
+  height: 22px;
+  margin-left: 8px;
+}
+
+.btn-slide2:hover span.circle2 {
+  left: 100%;
+  margin-left: -45px;
+  background-color: rgb(0 0 0 / 20%);
+  color: #efa666
+}
+
+.btn-slide2:hover span.title2 {
+  left: 40px;
+  opacity: 0
+}
+
+.btn-slide2:hover span.title-hover2 {
+  opacity: 1;
+  left: 34px
+}
+
+.btn-slide2 span.circle2 {
+  display: block;
+  color: #fff;
+  position: absolute;
+  float: left;
+  margin: 4px;
+  line-height: 48px;
+  height: 40px;
+  width: 40px;
+  padding-left: 1px;
+  top: 0;
+  left: 0;
+  transition: .5s;
+  border-radius: 50%
+}
+
+.btn-slide2 span.title-hover2,
+.btn-slide2 span.title2 {
+  font-family:jungle;
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 700;
+  transition: .5s;
+  color: #efa666;
+  left: 65px;
+}
+
+.btn-slide2 span.title-hover2 {
+  left: 75px;
+  opacity: 0;
+  color: #fff
+}
+
+.download-button-container {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}

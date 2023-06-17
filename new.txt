@@ -1,1 +1,1 @@
-                image.dataset.animalId = animal.id; // Set the 'data-animal-id' attribute with the animal ID
+image.dataset.animalId = animal.id; // setam atributul 'data-animal-id' cu id-ul animalului 

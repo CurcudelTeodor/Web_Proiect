@@ -105,6 +105,7 @@ header {
 }
 
 .logo {
+    font-family: jungle;
     color: rgb(255, 255, 255);
     font-size: 35px;
     font-weight: 20;
