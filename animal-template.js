@@ -4,7 +4,7 @@ var animalName = decodeURIComponent(window.location.search.split('=')[1].replace
 var animalId = searchParams.get('animal');
 
 // Fetch the animal data from the server using the animal name
-fetch('http://localhost/Zoo/Web_Proiect/animal-api.php?name=' + encodeURIComponent(animalName))
+fetch('http://localhost:81/Zoo/Web_Proiect/animal-api.php?name=' + encodeURIComponent(animalName))
   .then(function (response) {
     return response.json();
   })
