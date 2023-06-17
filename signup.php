@@ -64,9 +64,8 @@ class Signup
            ('$userid','$username','$hashedPassword','$email') ";
         $DB = new Database();
         $DB->save($query);
-        $_SESSION['userid'] = $userid;
         $_SESSION['username'] = $username;
-        header("Location: home.html");
+        header("Location: home.php");
         exit;
     }
     public function is_email_used($email)
@@ -104,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $confirm_password = $_POST['confirm_password'];
     $email = $_POST['email'];
     if ($password != $confirm_password) {
-        header("Location: animals.html");
+        header("Location: register.html");
         exit;
     } else {
         $signup = new Signup();

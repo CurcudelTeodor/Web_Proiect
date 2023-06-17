@@ -32,10 +32,3 @@ class Database
     }
 }
 
-/*
-$DB = new Database();
-$query = "select * from useri";
-$data = $DB->read($query);
-echo "<pre>";
-print_r($data);
-*/

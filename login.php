@@ -17,9 +17,8 @@ class Login
         if ($result) {
             $row = $result[0];
             if (password_verify($password1, $row['password'])) {
-                $_SESSION['userid'] = $row['userid'];
                 $_SESSION['username'] = $row['username'];
-                header("Location: home.html");
+                header("Location: home.php");
                 exit;
             } else {
                 header("Location: index.html");
