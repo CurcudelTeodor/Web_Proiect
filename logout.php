@@ -5,5 +5,7 @@ if (isset($_POST['logout']) && $_POST['logout'] === 'true') {
 
   $_SESSION['username'] = "";
 
+  // Optional distrugem sesiunea
+  // session_destroy();
 }
 ?>
