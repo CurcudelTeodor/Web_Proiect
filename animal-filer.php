@@ -1,5 +1,5 @@
 <?php
-// Establish the database connection
+// [DEPRECATED] Establish the database connection
 $host = 'localhost';
 $dbname = 'zoo';
 $username = 'root';
