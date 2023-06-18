@@ -42,7 +42,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 170px;
+    /* inainte: 30px 170px -> era mai departat logo-ul de marginea din stanga */
+    padding: 30px 80px;
     color: aquamarine;
 
 }
