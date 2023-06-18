@@ -17,8 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $searchQuery = filter_input(INPUT_POST, 'searchQuery', FILTER_SANITIZE_STRING);
 
   // construim interogarea SQL pentru a căuta animalele care conțin șirul de căutare
-  $sql = "SELECT * FROM animals WHERE name LIKE :searchQuery";
-  $params = array('searchQuery' => '%' . $searchQuery . '%');
+$sql = "SELECT * FROM animals WHERE name REGEXP :searchQuery";
+$params = array('searchQuery' => '[[:<:]]' . $searchQuery . '[[:>:]]');
+
+  $sql .= " ORDER BY name ASC";
 
   // pregătim și executăm interogarea
   $stmt = $pdo->prepare($sql);
@@ -42,7 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         'min_weight' => $row['min_weight'],
         'max_weight' => $row['max_weight'],
         'image' => isset($row['image']) ? $row['image'] : null
-
       );
 
       $response[] = $animal;

@@ -106,13 +106,37 @@ header {
 }
 
 .logo {
-    font-family: jungle;
-    color: rgb(255, 255, 255);
-    font-size: 35px;
-    font-weight: 20;
-    letter-spacing: 1px;
+  font-family: jungle;
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  font-weight: 20;
+  letter-spacing: 1px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  
+    animation: breathe 1.5s infinite ease-in-out;
+
 }
 
+.img2  {
+    transition: transform 0.5s;
+  }
+  
+  .img2:hover {
+    transform: scale(1.3);
+  }
+  
+/* .logo:hover{
+} */
+@keyframes breathe {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+  }
 section {
     padding: 90px 3%;
 }
@@ -256,7 +280,12 @@ p {
     height: 100vh;
     margin: 0 10px 0 0;
     overflow: auto;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+
 }
+
 
 .main {
     padding-bottom:100px;
@@ -279,7 +308,25 @@ p {
     padding-top: 20px;
 }
 
-
+.page::-webkit-scrollbar {
+    width: 5px;
+    display: none;
+  }
+  
+  .page::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+  }
+  
+  .page::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 3px;
+  }
+  
+  /* Adjust the colors to your preference */
+  :root {
+    --scrollbar-thumb-color: #888;
+    --scrollbar-track-color: #f1f1f1;
+  }
 
 .filter-wrapper {
     position: absolute;
@@ -300,7 +347,13 @@ p {
     background-image: linear-gradient(to top, pink, rgb(255, 178, 203), pink);
     border-radius: 30px;
 }
+h3{
+    font-family: jungle;
+}
 
+#animal-form{
+    padding-left:30px;
+}
 .options h3 {
     font-weight: bold;
     color: white;
@@ -384,8 +437,8 @@ p {
 }
 
 .img2 {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
 }
 .animal-item {
     position: relative;
@@ -443,6 +496,33 @@ img:hover{
     font-weight: bold;
     align-items: center;
 }
+.search_box {
+    position: relative;
+    padding-bottom:10px;
+  }
+  
+  #suggestions-container {
+    color:#f95cbd;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    padding: 0; /* Set initial padding to 0 */
+    transition: padding 1.5s !important; /* Add transition for smooth effect */
+    /* opacity:0 */
+  }
+  
+  .search_box:hover #suggestions-container {
+    padding: 10px !important; /* Apply padding when hovering over the search box */
+    /* opacity: 1; */
+  }
+  #suggestions-container:hover{
+    opacity: 1;
+  }
 
 /*
     button[type="submit"] {
@@ -492,10 +572,26 @@ img:hover{
     background: transparent;
 }
 
-.search_box a .fas {
+.search_box button .fas {
     color: #1daf;
     font-size: 18px;
 }
+.button{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.search_box button.search-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none; /* Remove the outline when button is focused */
+  }
+  
+  .search_box button.search-button i {
+    font-size: 16px;
+   
+  }
 
 @media (max-width: 1340px) {
     .search_box:hover input {

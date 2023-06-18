@@ -54,10 +54,10 @@ function getAnimalOptions() {
     xhr.send(new URLSearchParams(new FormData(form)).toString());
   }
   
+
   function searchAnimals() {
     var xhr = new XMLHttpRequest();
-    var form = document.getElementById('animal-form');
-    var searchQuery = document.querySelector('.search_box input').value;
+    var searchQuery = document.getElementById('search-input').value;
   
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status === 200) {
@@ -70,6 +70,8 @@ function getAnimalOptions() {
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
     xhr.send('searchQuery=' + encodeURIComponent(searchQuery));
   }
+  
+  
   function displayAnimals(animals) {
     var animalList = document.getElementById('animal-list');
     animalList.innerHTML = '';
@@ -106,3 +108,4 @@ function getAnimalOptions() {
     }
   }
   
+ 

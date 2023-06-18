@@ -17,6 +17,7 @@
 
   <!-- Other head elements -->
   <script src="animals_script.js"></script>
+  <script src="suggestions.js"></script>
 
 
 </head>
@@ -34,13 +35,14 @@
       </ul>
 
       <div class="search_box">
-        
-        <form id="search-form" onsubmit="event.preventDefault(); searchAnimals();">
-          <input type="text" id="search-input" placeholder="Cauta animale...">
-          <button type="submit">
+        <form id="search-form" onsubmit="event.preventDefault(); searchAnimals();" autocomplete="off">
+          <input type="text" id="search-input" placeholder="Search..." oninput=getSuggestions(this.value)>
+          <button type="submit" class="search-button">
             <i class="fas fa-search"></i>
           </button>
         </form>
+        <div id="suggestions-container"></div>
+
       </div>
 
       <div class="iconss">
