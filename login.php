@@ -18,6 +18,10 @@ class Login
             $row = $result[0];
             if (password_verify($password1, $row['password'])) {
                 $_SESSION['username'] = $row['username'];
+                if( $_SESSION['username']=='admin'){
+                    header("Location: admin.php");
+                exit; 
+                }
                 header("Location: home.php");
                 exit;
             } else {
