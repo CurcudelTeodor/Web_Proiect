@@ -13,15 +13,10 @@ if ($result) {
     $_SESSION['emailRecovery'] = $email;
     
 $EM->initialize($email); 
-$EM->send();
+$EM->send($email);
 
         $DB->save($query);
-
-
-
-
-
-        header("Location: EnterVerifCode/enterverifcode.html");
+  header("Location: EnterVerifCode/enterverifcode.html");
     exit;
  echo "da";
 } else {
