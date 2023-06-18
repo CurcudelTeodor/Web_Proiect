@@ -1,4 +1,4 @@
-<FilesMatch "^(about|help|Animals|admin)\.html$">
+<FilesMatch "^(about|help|Animals|admin|config)\.html$">
     Order Deny,Allow
     Deny from all
 </FilesMatch>
