@@ -13,27 +13,7 @@
 
   <!--Pentru iconita de search de la search bar-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <script>
-    // Assuming you have a class or selector to target the animal images, such as '.animal-image'
-    var animalImages = document.querySelectorAll('.images img');
-  
-    // Add a click event listener to each animal image
-    animalImages.forEach(function (image) {
-      image.addEventListener('click', function (event) {
-        event.preventDefault(); // Prevent the default link behavior
-  
-        // Get the animal type from the clicked image's alt attribute
-        var animalType = image.getAttribute('alt');
-  
-        // Construct the URL with the animal type parameter
-        var animalPageURL = 'Animals.php?type=' + encodeURIComponent(animalType);
-  
-        // Redirect the user to the animal page with the specific type
-        window.location.href = animalPageURL;
-      });
-    });
-  </script>
-  
+
 
 </head>
 
@@ -57,7 +37,7 @@
 
     <div class="icons">
       <!--<img src="images/search.png" alt="sc">-->
-      <a href="config.html"> <img src="images/userdetail.png" alt="sc" class="img2"></a>
+      <a href="config.php"> <img src="images/userdetail.png" alt="sc"></a>
       <img src="images/menu.png" id="icon-menu" alt="sc">
     </div>
   </header>
@@ -69,16 +49,16 @@
         preferata.</p>
     </div>
     <div class="optiuni">
-      <div class="images"><a href="Mammals.php"><img src="images/elefant.svg" class="images" alt="sc">
+      <div class="images"><a href="Animals.php"><img src="images/elefant.svg" class="images" alt="sc">
           <p>MAMMALS</p>
         </a></div>
-      <div class="images"><a href="Birds.php"><img src="images/birds.svg" class="images" alt="sc">
+      <div class="images"><a href="Animals.php"><img src="images/birds.svg" class="images" alt="sc">
           <p>BIRDS</p>
         </a></div>
-      <div class="images"><a href="Reptiles.php"> <img src="images/peste.svg" class="images" alt="sc">
+      <div class="images"><a href="Animals.php"> <img src="images/peste.svg" class="images" alt="sc">
           <p>REPTILES</p>
         </a></div>
-      <div class="images"><a href="Fishes.php"><img src="images/fishes.svg" class="images" alt="sc">
+      <div class="images"><a href="Animals.php"><img src="images/fishes.svg" class="images" alt="sc">
           <p>FISHES</p>
         </a></div>
     </div>
