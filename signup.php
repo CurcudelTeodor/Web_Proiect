@@ -40,6 +40,8 @@ class Signup
             return $this->error;
         }
     }
+
+
     private function create_userid()
     {
         $length = rand(4, 19);
@@ -50,24 +52,30 @@ class Signup
         }
         return $number;
     }
+
+
     public function create_user($data)
     {
-
         $username = $data['username'];
         $password = $data['password'];
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         $email = $data['email'];
         $userid = $this->create_userid();
-        $query = "insert into useri
-         (userid, username, password, email)
-          values
-           ('$userid','$username','$hashedPassword','$email') ";
+
         $DB = new Database();
-        $DB->save($query);
+        $connection = $DB->connect();
+
+        //prevenim sql injection
+        $query = "INSERT INTO useri (userid, username, password, email) VALUES (?, ?, ?, ?)";
+        $stmt = mysqli_prepare($connection, $query);
+        mysqli_stmt_bind_param($stmt, "ssss", $userid, $username, $hashedPassword, $email);
+        mysqli_stmt_execute($stmt);
+
         $_SESSION['username'] = $username;
         header("Location: home.php");
         exit;
     }
+
     public function is_email_used($email)
     {
         $query = "SELECT COUNT(*) as count FROM useri WHERE email = '$email'";
@@ -79,6 +87,8 @@ class Signup
         }
         return false;
     }
+
+
     public function is_username_used($username)
     {
         $query = "SELECT COUNT(*) as count FROM useri WHERE username = '$username'";

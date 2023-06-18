@@ -9,31 +9,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+  <title>Wild Grove</title>
 
   <!--Pentru iconita de search de la search bar-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script>
     // Assuming you have a class or selector to target the animal images, such as '.animal-image'
     var animalImages = document.querySelectorAll('.images img');
-  
+
     // Add a click event listener to each animal image
     animalImages.forEach(function (image) {
       image.addEventListener('click', function (event) {
         event.preventDefault(); // Prevent the default link behavior
-  
+
         // Get the animal type from the clicked image's alt attribute
         var animalType = image.getAttribute('alt');
-  
+
         // Construct the URL with the animal type parameter
         var animalPageURL = 'Animals.php?type=' + encodeURIComponent(animalType);
-  
+
         // Redirect the user to the animal page with the specific type
         window.location.href = animalPageURL;
       });
     });
   </script>
-  
+
 
 </head>
 
@@ -64,9 +67,12 @@
   <script src="script.js"></script>
   <section class="home" id="home">
     <div class="home-text">
-      <h1>Bine ai venit!<br>ZOOLAND</h1>
-      <p>Esti pasionat de animale? <br>Ai nimerit unde trebuie!<br>Cauta cele mai tari informatii despre specia ta
-        preferata.</p>
+      <h1>
+        <div class="wild-grove">Welcome to <br> Wild Grove</div>
+      </h1>
+      <p>Are you passionate about animals?<br> You've come to the right place!<br> Discover the coolest information
+        about your <br>favorite species.</p>
+
     </div>
     <div class="optiuni">
       <div class="images"><a href="Mammals.php"><img src="images/elefant.svg" class="images" alt="sc">

@@ -394,3 +394,16 @@ section {
     font-size: 16px;
    
   }
+
+  .wild-grove{
+    font-family: jungle;
+    margin-bottom: 15px;    
+  }
+
+  .wild-grove:hover{
+    color:orange;
+  }
+  .home-text p{
+    font-family:Viga;
+    line-height: 1.5;
+  }

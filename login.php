@@ -1,26 +1,33 @@
 <?php
 include("connect.php");
+
 class Login
 {
-
     private $error = "";
 
     public function verify_user($data)
     {
-
-        $username1 = addslashes($data['username']);
-        $password1 = addslashes($data['password']);
-        $query = "select * from useri where username = '$username1' limit 1";
+        $username = addslashes($data['username']);
+        $password = addslashes($data['password']);
 
         $DB = new Database();
-        $result = $DB->read($query);
-        if ($result) {
-            $row = $result[0];
-            if (password_verify($password1, $row['password'])) {
+        $connection = $DB->connect();
+
+        $query = "SELECT * FROM useri WHERE username = ? LIMIT 1";
+        //!! ' OR 1=1; --      NOT working aynmore -> very good
+        //!! ' OR 1=1; DROP TABLE useri; --     NOT working aynmore-> very good
+        $stmt = mysqli_prepare($connection, $query);
+        mysqli_stmt_bind_param($stmt, "s", $username);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+
+        if ($result && mysqli_num_rows($result) > 0) {
+            $row = mysqli_fetch_assoc($result);
+            if (password_verify($password, $row['password'])) {
                 $_SESSION['username'] = $row['username'];
-                if( $_SESSION['username']=='admin'){
+                if ($_SESSION['username'] == 'admin') {
                     header("Location: admin.php");
-                exit; 
+                    exit;
                 }
                 header("Location: home.php");
                 exit;
@@ -34,10 +41,11 @@ class Login
         }
     }
 }
+
 session_start();
-$password1 = "";
-$username1 = "";
+$password = "";
+$username = "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-       $login = new Login();
-      $login->verify_user($_POST);
+    $login = new Login();
+    $login->verify_user($_POST);
 }
