@@ -1,9 +1,29 @@
-<FilesMatch "^(about|help|Animals|admin)\.html$">
+<FilesMatch "^(about|help|Animals|admin|config)\.html$">
     Order Deny,Allow
     Deny from all
 </FilesMatch>
 
 <Files "home.html">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "Mammals.html">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "Fishes.html">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "Birds.html">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "Reptiles.html">
     Order Deny,Allow
     Deny from all
 </Files>
