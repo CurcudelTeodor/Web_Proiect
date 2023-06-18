@@ -30,7 +30,7 @@ $this->email=$emailRecovery;
             $mail->Host       = 'smtp.gmail.com';                 
             $mail->SMTPAuth   = true;                            
             $mail->Username   = 'eneaiustingabriel@gmail.com';                
-            $mail->Password   = 'wlxbaxocmhctcqjd';                       
+            $mail->Password   = '//You wish buddy XDD, try again next time bozo';                      
             $mail->SMTPSecure = 'tls';                             
             $mail->Port       = 587; 
          

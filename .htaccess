@@ -1,0 +1,16 @@
+<FilesMatch "^(about|help|Animals|admin)\.html$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+<Files "home.html">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "home.php">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+
