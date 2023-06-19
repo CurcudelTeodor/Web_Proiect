@@ -31,7 +31,7 @@ fetch('http://localhost:81/Zoo/Web_Proiect/animal-api.php?name=' + encodeURIComp
      var region = animal.region;
      var mapElement = document.querySelector('.map');
      var mapImage = document.createElement('img');
-     mapImage.src = 'images/' + region.toLowerCase().replace(/ /g, '_') + '.svg';
+     mapImage.src = 'images/' + region.toLowerCase().replace(/ /g, '_') + '.jpg';
      mapImage.alt = region;
      mapElement.appendChild(mapImage);
 
