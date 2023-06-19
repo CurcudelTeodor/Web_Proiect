@@ -454,7 +454,7 @@ h3{
     left: 50%;
     transform: translate(-50%, -50%);
     transition: transform 0.5s;
-    width:230px;
+    width:260px;
   }
   
   .animal-item:hover h3 {
