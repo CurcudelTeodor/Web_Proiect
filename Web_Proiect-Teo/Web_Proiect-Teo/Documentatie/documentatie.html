@@ -56,12 +56,20 @@
     <div class="continut">
       <h2>Structura</h2>
       <h3> &nbsp; &nbsp; Site-ul este organizat în jurul a 9 pagini importante: Login, Register, Forgot Password (Enter
-        Your Email + Code Verification + Reset Password), Home, Animals, Animal Example, About, Help, Settings</h3>
+        Your Email + Code Verification + Reset Password), Home, Animals, Animal Example, About, Help, Settings, Admin page</h3>
       <br>
       <p>Teo s-a ocupat de paginile de Login, Code Verification si Reset Password</p>
       <p>Iustin s-a ocupat de Home, Help, About, Settings</p>
       <p>Alex s-a ocupat de Register, Animals, Animal Example (VulpePolara), Email</p>
 
+      <p>Backend (Am lucrat pe github):
+        <p>Teo s-a ocupat de design-ul intregii aplicatii (look & feel), pagina de animale, search bar + sugestii, baza de date, 
+          template-ul pentru animale, api, pagina admin, implementare functionalitati... via github
+        </p>
+        <p>Iustin s-a ocupat de login, register, resetarea emailului (cu biblioteca phpMailer), pagina admin, variabile de sesiune, implementare functionalitati... via github </p>
+        <p>Alex s-a ocupat de search bar si de filtrare, optiunile de filtrare </p>
+
+      </p>
       <h3>Login</h3><br>
       <p> &nbsp; &nbsp; Papagalul este pe prima pagina cu care ia contact utilizatorul. Este o pasare care iti ia ochii
         datorita
@@ -186,10 +194,16 @@
 
 
       <h3>Settings</h3><br>
-      <p> &nbsp; &nbsp; Profilul de configurare permite delogarea, schimbarea limbii in romana, engleza si franceza, cat
-        si schimbarea temei, la alegere,
-        intre tropical si safari. </p>
+      <p> &nbsp; &nbsp; Profilul de configurare permite delogarea</p>
       <br>
+      
+      <h3>Admin Page</h3><br>
+      <p> &nbsp; &nbsp; Pagina afiseaza 3 butoane: Alege fisierul (pentru alegerea unei imagine sub formatul: numeanimal.jpg); Import pentru importarea 
+        unui JSON cu numele numeanimal.json; Upload pentru incarcarea animalului in baza de date. <br><br>
+        Exemplu: mustang.png; mustang.json; arcticfox.png; arcticfox.json
+      </p>
+      <br>
+      
     </div>
 
     <div class="continut">
@@ -243,15 +257,32 @@
       </p>
 
       <h2>&nbsp; &nbsp; API</h2>
-      &nbsp; &nbsp; Ofera un JSON cu toate informatiile despre un animal
+      &nbsp; &nbsp; Ofera un JSON cu toate informatiile despre un animal <br>
 
       <br>&nbsp; &nbsp;
       http://localhost:81/Zoo/Web_Proiect/animal-api.php?name=Arctic%20Fox
+      <br>
+
+      <br>&nbsp; &nbsp;
+      http://localhost:81/Zoo/Web_Proiect/animal-api.php?name=Lion
+      <br>
+
+      <br>&nbsp; &nbsp;
+      http://localhost:81/Zoo/Web_Proiect/animal-api.php?name=Pirarucu
+      <br>
+
+      <br>&nbsp; &nbsp;
+      http://localhost:81/Zoo/Web_Proiect/animal-api.php?name=Zebra
+      <br>
+
+      <br>&nbsp; &nbsp;
+      http://localhost:81/Zoo/Web_Proiect/animal-api.php?name=White%20Shark
       <br><br>
 
       <h2>&nbsp; &nbsp; Bonus</h2>
       <div style="text-align: center !important; margin-right:100px">
-        &nbsp; &nbsp; Sit-ul arata frumos si se comporta bine, design modern, animatii. Este placut sa navighezi <br><br>
+        &nbsp; &nbsp; Sit-ul arata frumos si se comporta bine, design modern, animatii. Este placut sa navighezi
+        <br><br>
         &nbsp; &nbsp; Cod functional de trimitere a unui mail de recuperare a parolei <br><br>
         &nbsp; &nbsp; Search bar cu sugestii (imagine mai jos) <br><br>
 

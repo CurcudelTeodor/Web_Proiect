@@ -1,0 +1,11 @@
+{
+    "name": "Mustang",
+    "scientificName": "Equus ferus caballus",
+    "conservationStatus": "Not evaluated",
+    "type": "Mammal",
+    "region": "North America",
+    "climate": "Temperate",
+    "minWeight": "400 kg",
+    "maxWeight": "900 kg",
+    "description": "The Mustang is a breed of horse that traces its roots to the wild horses of the western United States, particularly the American Great Plains. They are known for their strength, endurance, and adaptability to harsh environments. Mustangs have a robust and muscular build, with a range of coat colors and patterns. They are highly versatile and have historically been used for various purposes, including ranch work, endurance riding, and as companion animals. Mustangs have played a significant role in American history and have become symbols of freedom and the untamed spirit of the American West. While the conservation status of Mustangs as a breed is not evaluated, efforts are made to protect and preserve wild horse populations, ensuring their continued existence and maintaining their genetic diversity."
+  }

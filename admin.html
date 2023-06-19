@@ -15,13 +15,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f2f2f2;
+        }
+
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column;
+        }
+
+        .form-container {
+            margin-bottom: 20px;
             display: flex;
-  flex-direction: column;
+            flex-direction: column;
+        }
+
+        .form-container input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #008080;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #006666;
+        }
+
+        #import-button {
+            padding: 10px 20px;
+            background-color: #004d4d;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #import-button:hover {
+            background-color: #003333;
         }
     </style>
 </head>
@@ -34,7 +78,6 @@
             <li id="#animals"><a href="Animals.php">ANIMALS</a></li>
             <li id="#despre"><a href="about.php">ABOUT US</a></li>
             <li id="#help"><a href="help.php">HELP</a></li>
-
         </ul>
 
         <div class="search_box">
@@ -43,30 +86,27 @@
                 <i class="fas fa-search"></i>
             </a>
         </div>
-        <script src="script.js"></script>
-            <div class="icons">
-                <!--<img src="images/search.png" alt="sc">-->
-                <a href="config.html"> <img src="images/userdetail.png" alt="sc"></a>
-                <img src="images/menu.png" id="icon-menu" alt="sc">
-            </div>
-    </header>
-    <section>
-    <div class="container">
 
-        <div>
-        <form action="upload.php" method="POST" enctype="multipart/form-data">
-            <input type="file" name="image" accept="image/*">
-            <button type="submit">Upload</button>
-        </form>
+        <div class="icons">
+            <!--<img src="images/search.png" alt="sc">-->
+            <a href="config.php"> <img src="images/userdetail.png" alt="sc"></a>
+            <img src="images/menu.png" id="icon-menu" alt="sc">
         </div>
-        <div>
-            <button id="import-button">Import</button>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="form-container">
+                <button id="import-button">Import</button>
+                <form action="upload.php" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="image" accept="image/*">
+                    <button type="submit">Upload</button>
+                </form>
+            </div>
         </div>
-    </div>
     </section>
 
     <script src="import.js"></script>
-
 </body>
 
 </html>

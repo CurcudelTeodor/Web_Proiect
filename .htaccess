@@ -3,6 +3,11 @@
     Deny from all
 </FilesMatch>
 
+<Files "config.html">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
 <Files "home.html">
     Order Deny,Allow
     Deny from all
@@ -32,5 +37,3 @@
     Order Allow,Deny
     Allow from all
 </Files>
-
-
