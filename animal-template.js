@@ -27,6 +27,13 @@ fetch('http://localhost:81/Zoo/Web_Proiect/animal-api.php?name=' + encodeURIComp
     document.getElementById('min-weightT').textContent = 'Minimum weight: ' + animal.min_weight + ' kg';
     document.getElementById('max-weightT').textContent = 'Maximum weight: ' + animal.max_weight + ' kg';
 
+     // Get the animal's region and set the map image based on it
+     var region = animal.region;
+     var mapElement = document.querySelector('.map');
+     var mapImage = document.createElement('img');
+     mapImage.src = 'images/' + region.toLowerCase().replace(/ /g, '_') + '.svg';
+     mapImage.alt = region;
+     mapElement.appendChild(mapImage);
 
   })
   .catch(function (error) {

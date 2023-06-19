@@ -233,3 +233,15 @@ p {
   align-items: flex-start;
   margin-top: 20px;
 }
+
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}

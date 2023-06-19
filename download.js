@@ -32,7 +32,7 @@ function handleDownloadButtonClick() {
   const buttonIcon = document.createElement("span");
   buttonIcon.classList.add("circle2");
   // Insert your SVG path here for the custom icon
-  buttonIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Insert your SVG path here --></svg>';
+  buttonIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Inserez svg-ul --></svg>';
 
   // Append the button elements
   a.appendChild(buttonIcon);

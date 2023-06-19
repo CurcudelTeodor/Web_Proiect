@@ -454,7 +454,7 @@ h3{
     left: 50%;
     transform: translate(-50%, -50%);
     transition: transform 0.5s;
-    width:200px;
+    width:230px;
   }
   
   .animal-item:hover h3 {
@@ -522,6 +522,9 @@ img:hover{
   }
   #suggestions-container:hover{
     opacity: 1;
+  }
+  #suggestions-container{
+    font-family: jungle;
   }
 
 /*
